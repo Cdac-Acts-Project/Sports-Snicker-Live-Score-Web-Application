@@ -40,6 +40,10 @@ public class JwtUtil {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
+    public String generateToken(String userName){
+        Map<String,Object> claims=new HashMap<>();
+        return createToken(claims,userName);
+    }
     private Claims extractAllClaims(String token) {
         return Jwts
                 .parserBuilder()
@@ -49,10 +53,6 @@ public class JwtUtil {
                 .getBody();
     }
 
-    public String generateToken(String userName){
-        Map<String,Object> claims=new HashMap<>();
-        return createToken(claims,userName);
-    }
 
     private String createToken(Map<String, Object> claims, String userName) {
         return Jwts.builder()
