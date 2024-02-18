@@ -1,5 +1,5 @@
-import { TypeAnimation } from 'react-type-animation';
 
+import { TypeAnimation } from 'react-type-animation';
 const SportSnickerAnimation = () => {
   return (
     <TypeAnimation
