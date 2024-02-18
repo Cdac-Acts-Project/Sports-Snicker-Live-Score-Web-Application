@@ -13,11 +13,17 @@ import java.util.List;
 @RestController
 @RequestMapping("/football")
 @CrossOrigin("*")
+
 public class FootballController {
     private FootballService footballService;
 
     public FootballController(FootballService footballService) {
         this.footballService = footballService;
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Football>> getAllMatches() {
+        return new ResponseEntity<>(this.footballService.getAllMatches(), HttpStatus.OK);
     }
 
     @GetMapping("/live")
@@ -26,8 +32,5 @@ public class FootballController {
         return new ResponseEntity<List<Football>>(this.footballService.getLiveMatches(), HttpStatus.OK);
     }
 
-    @GetMapping
-    public ResponseEntity<List<Football>> getAllMatches() {
-        return new ResponseEntity<>(this.footballService.getAllMatches(), HttpStatus.OK);
-    }
+   
 }
