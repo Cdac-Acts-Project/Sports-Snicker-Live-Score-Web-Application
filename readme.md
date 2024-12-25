@@ -15,8 +15,8 @@ Overall, the Java backend serve as the engine powering the sports web applicatio
 # Team Members
 
 ### Sarthak Bhatnagar - 230940120174
-### Sanket Kailas Chaudhari - 230940120173
+### Suryansh Srijan - 230940120204
 ### Yusuf Usman Pathan - 230940120232
 ### Huda Ayyub Khan - 230940120072
 ###  Edson Neusia - 230940120241
-### Suryansh Srijan - 230940120204
+### Sanket Kailas Chaudhari - 230940120173
